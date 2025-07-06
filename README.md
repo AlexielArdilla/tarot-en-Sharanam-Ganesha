@@ -1,3 +1,3 @@
 # Página de tarot
 
-## URL: 
+## URL: https://alexielardilla.github.io/tarot-en-Sharanam-Ganesha
