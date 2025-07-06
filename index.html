@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharanam Ganesha - Tiradas de Tarot Holístico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FDFBF8;
+            color: #3D352E;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease, border-color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            color: #C0A080;
+            border-bottom-color: #C0A080;
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-card {
+            border: 1px solid #EAEAEA;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-color: #C0A080;
+        }
+
+        .section-bg-dark {
+            background-color: #2E4057;
+            color: #F5F5F5;
+        }
+
+        .card-interactive {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card-interactive:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .detail-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-out, padding 0.7s ease-out;
+            background-color: #f4f1ed;
+        }
+
+        .detail-panel.active {
+            max-height: 4000px;
+            /* Sufficiently large */
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-gray-800">Sharanam Ganesha</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="nav-link pb-1">Inicio</a>
+                <a href="#sesiones" class="nav-link pb-1">Sesiones</a>
+                <a href="#filosofia" class="nav-link pb-1">Filosofía</a>
+                <a href="guia-cosmica.html" class="nav-link pb-1">Guía Cósmica</a>
+                <a href="#contacto" class="nav-link pb-1">Contacto</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#inicio" class="block py-2 px-4 text-sm hover:bg-gray-100">Inicio</a>
+            <a href="#sesiones" class="block py-2 px-4 text-sm hover:bg-gray-100">Sesiones</a>
+            <a href="#filosofia" class="block py-2 px-4 text-sm hover:bg-gray-100">Filosofía</a>
+            <a href="guia-cosmica.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Guía Cósmica</a>
+            <a href="#contacto" class="block py-2 px-4 text-sm hover:bg-gray-100">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative min-h-screen flex items-center">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20"
+                style="background-image: url('https://images.unsplash.com/photo-1590172324829-99c465fa0489?q=80&w=2592&auto=format&fit=crop');">
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Descubre tu Camino con el Tarot Holístico
+                </h1>
+                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+                    El tarot no adivina el futuro, ilumina tu presente. A través de una mirada integral que combina PNL,
+                    Coaching y Counseling, te ayudamos a entender tus decisiones, tomar un buen rumbo y crear la vida
+                    que deseas.
+                </p>
+                <a href="#sesiones"
+                    class="cta-button bg-[#3D352E] text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg">Ver
+                    Sesiones</a>
+            </div>
+        </section>
+
+        <!-- Sessions & Pricing Section -->
+        <section id="sesiones" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Sesiones de Tarot</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Elige la consulta que mejor se adapte a tu
+                        momento actual.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tirada Rápida -->
+                    <div class="price-card p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-4">Tirada Rápida</h3>
+                        <p class="text-5xl font-bold mb-4">$5.000</p>
+                        <p class="text-gray-500 mb-6">15-20 minutos</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Una respuesta clara
+                                y concisa.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Ideal para una
+                                pregunta específica.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Enfoque directo y al
+                                punto.</li>
+                        </ul>
+                        <a href="#contacto"
+                            class="cta-button w-full bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg">Agendar</a>
+                    </div>
+                    <!-- Sesión Completa -->
+                    <div class="price-card p-8 text-center border-2 border-[#C0A080] relative">
+                        <span
+                            class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-[#C0A080] text-white text-xs font-bold px-3 py-1 rounded-full">MÁS
+                            POPULAR</span>
+                        <h3 class="text-2xl font-bold mb-4">Sesión Completa</h3>
+                        <p class="text-5xl font-bold mb-4">$30.000</p>
+                        <p class="text-gray-500 mb-6">40 min - 1 hora</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Análisis profundo de
+                                tu situación.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Integración de PNL y
+                                Coaching.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Claridad para tomar
+                                decisiones.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Plan de acción
+                                personalizado.</li>
+                        </ul>
+                        <a href="#contacto"
+                            class="cta-button w-full bg-[#3D352E] text-white font-bold py-3 px-6 rounded-lg">Agendar
+                            Ahora</a>
+                    </div>
+                    <!-- Combo Mensual -->
+                    <div class="price-card p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-4">Combo Mensual</h3>
+                        <p class="text-5xl font-bold mb-4">$50.000</p>
+                        <p class="text-gray-500 mb-6">4 tiradas al mes</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Seguimiento continuo
+                                de tu proceso.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Profundiza en
+                                diferentes áreas de tu vida.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Máximo valor y
+                                transformación.</li>
+                        </ul>
+                        <a href="#contacto"
+                            class="cta-button w-full bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg">Agendar</a>
+                    </div>
+                </div>
+                <div class="mt-16 text-center bg-amber-50 p-8 rounded-lg">
+                    <h4 class="text-2xl font-bold mb-4">Nuestros Mazos de Tarot</h4>
+                    <p class="text-gray-700 max-w-3xl mx-auto">
+                        Iniciamos las tiradas con el clásico y universalmente simbólico tarot <b>Rider-Waite-Smith
+                            (RWS)</b> por su claridad y profundidad. Después de la cuarta sesión, y según tu progreso e
+                        intuición, te ofrecemos la posibilidad de explorar las energías de otros mazos fascinantes como
+                        el <b>Tarot de Marsella</b> y el <b>Tarot Esotérico</b>, abriendo nuevas capas de autoconocimiento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="filosofia" class="py-20 md:py-32 section-bg-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4 text-[#8DB587]">Nuestra Filosofía: Tarot Holístico</h2>
+                    <p class="text-lg text-gray-300 max-w-2xl mx-auto">Redescubrimos el tarot como un espejo del alma,
+                        no como un oráculo del destino.</p>
+                </div>
+
+                <div class="bg-gray-900/20 rounded-lg shadow-lg p-6 md:p-8 text-center mb-16">
+                    <h3 class="text-3xl font-bold mb-4 text-white">El Futuro No Está Escrito en Piedra</h3>
+                    <p class="max-w-3xl mx-auto text-gray-300 mb-8">Tu futuro es un abanico de posibilidades que se crea
+                        con cada decisión. El tarot ilumina tu presente para que puedas elegir tu camino con conciencia
+                        y poder.</p>
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                        <div class="p-4 bg-[#2E4057] rounded-lg shadow-inner">
+                            <span class="text-4xl">🤔</span>
+                            <p class="font-bold mt-2">Tu Presente</p>
+                        </div>
+                        <div class="hidden md:block text-4xl text-[#D9A624] font-black">&rarr;</div>
+                        <div class="block md:hidden text-4xl text-[#D9A624] font-black">&darr;</div>
+                        <div class="flex space-x-4">
+                            <div class="p-4 border-2 border-dashed border-[#8DB587] rounded-lg">
+                                <p>Camino A</p>
+                            </div>
+                            <div class="p-4 border-2 border-dashed border-[#D57E1C] rounded-lg">
+                                <p>Camino B</p>
+                            </div>
+                            <div class="p-4 border-2 border-dashed border-[#A52535] rounded-lg">
+                                <p>Camino C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="max-w-3xl mx-auto text-gray-400 mt-8 text-sm">La lectura te muestra las energías
+                        disponibles y los potenciales, pero la elección final siempre es tuya.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-gray-900/20 rounded-lg shadow-lg p-6 md:p-8">
+                        <h3 class="text-3xl font-bold mb-4 text-center text-[#D9A624]">El Propósito de la Lectura</h3>
+                        <p class="text-gray-300 mb-6 text-center">Una sesión de Tarot Holístico te proporciona claridad
+                            para dos acciones fundamentales:</p>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-4xl text-[#8DB587]">🔧</div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Realizar Cambios Necesarios</h4>
+                                    <p class="text-gray-400">Identificar y superar obstáculos, creencias limitantes y
+                                        patrones para forjar un nuevo camino.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-4xl text-[#D57E1C]">🧘</div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Aceptar lo Inmutable</h4>
+                                    <p class="text-gray-400">Desarrollar la sabiduría y la paz interior para aceptar las
+                                        circunstancias fuera de tu control.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/20 rounded-lg shadow-lg p-6 md:p-8">
+                        <h3 class="text-3xl font-bold mb-6 text-center text-[#8DB587]">Un Enfoque 100% Terapéutico</h3>
+                        <p class="text-center text-gray-300 mb-6">Nuestra metodología integra tres potentes disciplinas
+                            para catalizar tu transformación.</p>
+                        <div class="w-full bg-gray-700 rounded-full h-8 flex overflow-hidden">
+                            <div class="flex items-center justify-center text-xs font-medium text-white bg-[#8DB587]"
+                                style="width: 33.3%;">Counseling</div>
+                            <div class="flex items-center justify-center text-xs font-medium text-white bg-[#D9A624]"
+                                style="width: 33.3%;">Coaching</div>
+                            <div class="flex items-center justify-center text-xs font-medium text-white bg-[#D57E1C]"
+                                style="width: 33.4%;">PNL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cosmic Guide Section -->
+        <section id="guia-cosmica" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Guía Cósmica</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Un recurso para explorar los arquetipos y
+                        símbolos del tarot. Haz clic en una carta para descubrir su significado.</p>
+                </div>
+
+                <!-- Arcanos Mayores -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-8 text-center">Arcanos Mayores: El Viaje del Alma</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <!-- Major Arcana cards will be injected here by JS -->
+                    </div>
+                    <div id="major-card-detail-panel" class="detail-panel rounded-xl mt-8 shadow-inner border">
+                        <h3 id="major-detail-card-name" class="text-3xl font-bold text-gray-800 mb-2"></h3>
+                        <div class="flex space-x-4 mb-4">
+                            <button id="major-upright-btn"
+                                class="px-4 py-2 rounded-lg bg-gray-800 text-white font-semibold">Derecha</button>
+                            <button id="major-reversed-btn"
+                                class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 font-semibold">Invertida</button>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3" id="major-meaning-type"></h4>
+                        <p id="major-detail-description" class="text-gray-700 leading-relaxed mb-4"></p>
+                        <p id="major-detail-keywords" class="text-sm text-gray-600 leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Agenda tu Sesión</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Da el primer paso hacia una mayor claridad y
+                        empoderamiento. Haz clic en el botón para enviarme un mensaje por WhatsApp y coordinar tu
+                        sesión.</p>
+                </div>
+                <div class="text-center">
+                    <a href="https://wa.me/5491112345678?text=Hola,%20quisiera%20agendar%20una%20sesión%20de%20Tarot%20Holístico."
+                        target="_blank"
+                        class="inline-flex items-center justify-center cta-button bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg">
+                        <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.31 3.42 16.78L2.03 21.96L7.37 20.58C8.79 21.36 10.36 21.8 12.04 21.8H12.05C17.5 21.8 21.95 17.35 21.95 11.89C21.95 9.28 20.93 6.9 19.19 5.16C17.45 3.42 15.06 2.4 12.04 2.4L12.04 2ZM10.13 6.93H10.14C10.46 6.93 10.76 6.94 10.93 6.95C11.1 6.96 11.23 6.97 11.25 6.97C11.58 6.97 11.8 7.07 11.96 7.29C12.12 7.51 12.49 8.19 12.53 8.29C12.58 8.39 12.62 8.51 12.58 8.64C12.53 8.77 12.49 8.81 12.35 8.95C12.2 9.09 12.08 9.2 11.96 9.28C11.84 9.36 11.71 9.45 11.53 9.63C11.35 9.81 11.16 10.02 11.24 10.18C11.32 10.34 11.77 11.04 12.39 11.6C13.23 12.37 13.92 12.68 14.16 12.84C14.4 13 14.53 12.96 14.69 12.8C14.85 12.64 15.24 12.18 15.45 11.93C15.66 11.68 15.87 11.64 16.11 11.7C16.35 11.76 17.31 12.24 17.55 12.36C17.79 12.48 18.01 12.56 18.05 12.64C18.09 12.72 18.09 13.04 17.87 13.46C17.65 13.88 16.88 14.54 16.42 14.68C15.96 14.82 15.41 14.85 15.06 14.72C14.71 14.59 13.88 14.31 12.88 13.43C11.66 12.34 10.89 11.03 10.82 10.89C10.75 10.75 10.13 9.92 10.13 9.28C10.13 8.64 10.65 8.16 10.77 8.02C10.89 7.88 11.03 7.87 11.16 7.87C11.29 7.87 11.42 7.87 11.54 7.99C11.66 8.11 11.68 8.28 11.73 8.36C11.78 8.44 11.8 8.48 11.78 8.54L11.77 8.55C11.76 8.56 11.75 8.57 11.73 8.58C10.96 9.3 10.13 8.61 10.13 6.93Z" />
+                        </svg>
+                        Agendar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="section-bg-dark py-8">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Sharanam Ganesha. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Diseñado con amor y conciencia.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Tarot Data
+            const majorArcanaData = [
+                { id: '0', name: 'El Loco', emoji: '🤪', upright: { description: 'Nuevos comienzos, aventura, espontaneidad. Un salto de fe.', keywords: 'Aventura, Nuevos comienzos, Diversión, Salto de fe.' }, reversed: { description: 'Descuido, decisiones impulsivas, inmadurez.', keywords: 'Descuido, Error, Inmadurez, Distracciones.' } },
+                { id: '1', name: 'El Mago', emoji: '🎩', upright: { description: 'Manifestación, poder, habilidad, concentración.', keywords: 'Manifestación, Poderes psíquicos, Intelecto, Tomar acción.' }, reversed: { description: 'Manipulación, habilidades no utilizadas, potencial desperdiciado.', keywords: 'Manipulación, Engañador, Potencial desperdiciado.' } },
+                { id: '2', name: 'La Sacerdotisa', emoji: '🤫', upright: { description: 'Intuición, secretos, sabiduría interior, poder femenino.', keywords: 'Confía en tu intuición, Espiritualidad, Secreto, Equilibrio.' }, reversed: { description: 'Intuición bloqueada, deshonestidad, secretos revelados.', keywords: 'Intuición bloqueada, Deshonestidad, Aislamiento.' } },
+                { id: '3', name: 'La Emperatriz', emoji: '👸', upright: { description: 'Fertilidad, abundancia, naturaleza, nutrición, belleza.', keywords: 'Crecimiento, Belleza, Amor mutuo, Lujo, Embarazo.' }, reversed: { description: 'Bloqueo creativo, dependencia, problemas maternales.', keywords: 'Desacuerdos, Falta de abundancia, Negligencia.' } },
+                { id: '4', name: 'El Emperador', emoji: '👑', upright: { description: 'Autoridad, estructura, control, figura paterna.', keywords: 'Liderazgo, Éxito material, Control, Autoridad.' }, reversed: { description: 'Abuso de poder, rigidez, falta de disciplina.', keywords: 'Abuso de poder, Cobardía, Falta de disciplina.' } },
+                { id: '5', name: 'El Hierofante', emoji: '👴', upright: { description: 'Tradición, conformidad, instituciones, guía espiritual.', keywords: 'Religión, Tradición, Liderazgo, Matrimonio, Maestro.' }, reversed: { description: 'Rebeldía, romper tradiciones, no conformidad.', keywords: 'Romper tradición, Desafiar autoridad, No conformidad.' } },
+                { id: '6', name: 'Los Enamorados', emoji: '💞', upright: { description: 'Amor, armonía, relaciones, decisiones importantes.', keywords: 'Amor, Almas gemelas, Intimidad, Armonía, Elecciones.' }, reversed: { description: 'Conflicto, desarmonía, malas decisiones, separación.', keywords: 'Separación, Divorcio, Desarmonía, Problemas de confianza.' } },
+                { id: '7', name: 'El Carro', emoji: '🐎', upright: { description: 'Victoria, determinación, fuerza de voluntad, control.', keywords: 'Éxito, Control, Viaje, Movimiento, Superar obstáculos.' }, reversed: { description: 'Falta de dirección, agresión, pérdida de control.', keywords: 'Contratiempos, Falta de control, Agresión, Venganza.' } },
+                { id: '8', name: 'La Fuerza', emoji: '💪', upright: { description: 'Coraje, paciencia, compasión, control interior.', keywords: 'Fuerza interior, Poder, Paciencia, Confianza, Coraje.' }, reversed: { description: 'Debilidad, duda, falta de autocontrol.', keywords: 'Debilidad, Baja autoestima, Arrogancia, Ansiedad.' } },
+                { id: '9', name: 'El Ermitaño', emoji: '🧘‍♂️', upright: { description: 'Introspección, soledad, búsqueda del alma, guía interior.', keywords: 'Introspección, Soledad, Sabiduría interior, Guía.' }, reversed: { description: 'Aislamiento, soledad, paranoia.', keywords: 'Ignorar señales, Soledad y aislamiento, Traición.' } },
+                { id: '10', name: 'La Rueda', emoji: '🎡', upright: { description: 'Cambio, ciclos, destino, suerte, punto de inflexión.', keywords: 'Buena suerte, Ciclos, Cambio positivo, Destino.' }, reversed: { description: 'Mala suerte, resistencia al cambio, estancamiento.', keywords: 'Mala suerte, Cambio desagradable, Contratiempos.' } },
+                { id: '11', name: 'La Justicia', emoji: '⚖️', upright: { description: 'Justicia, equidad, verdad, causa y efecto, ley.', keywords: 'Resultado justo, Honestidad, Karma, Ley, Consecuencias.' }, reversed: { description: 'Injusticia, deshonestidad, consecuencias kármicas.', keywords: 'Injusticia, Deuda kármica, Deshonestidad.' } },
+                { id: '12', name: 'El Colgado', emoji: '�', upright: { description: 'Pausa, sacrificio, nueva perspectiva, dejar ir.', keywords: 'Sentirse atrapado, Incertidumbre, Cambiar perspectiva.' }, reversed: { description: 'Estancamiento, indecisión, resistencia al sacrificio.', keywords: 'Desinterés, Negarse a dejar ir, Estancamiento.' } },
+                { id: '13', name: 'La Muerte', emoji: '💀', upright: { description: 'Finales, transformación, cambio, transición.', keywords: 'Transformación, Cambio, Un final y un comienzo.' }, reversed: { description: 'Resistencia al cambio, miedo a lo nuevo, estancamiento.', keywords: 'Resistir el cambio, Miedo a dejar ir, Patrones negativos.' } },
+                { id: '14', name: 'La Templanza', emoji: '🕊️', upright: { description: 'Equilibrio, paciencia, moderación, propósito.', keywords: 'Paciencia, Moderación, Equilibrio, Curación, Guía.' }, reversed: { description: 'Desequilibrio, exceso, impaciencia, falta de armonía.', keywords: 'Impaciencia, Desequilibrio, Exceso, Imprudencia.' } },
+                { id: '15', name: 'El Diablo', emoji: '😈', upright: { description: 'Adicción, materialismo, ataduras, tentación.', keywords: 'Relación tóxica, Adicción, Engaño, Abuso, Lujuria.' }, reversed: { description: 'Liberación, romper cadenas, superar adicciones.', keywords: 'Superar adicciones, Libertad, Romper cadenas.' } },
+                { id: '16', name: 'La Torre', emoji: '⚡️', upright: { description: 'Cambio súbito, caos, revelación, destrucción.', keywords: 'Caos, Cambio repentino, Desastre, Pérdida, Trauma.' }, reversed: { description: 'Evitar el desastre, miedo al cambio, retrasar lo inevitable.', keywords: 'Resistir el cambio, Retrasar lo inevitable, Evitar tragedia.' } },
+                { id: '17', name: 'La Estrella', emoji: '🌟', upright: { description: 'Esperanza, fe, renovación, inspiración, curación.', keywords: 'Curación, Esperanza, Fama y riqueza, Deseos cumplidos.' }, reversed: { description: 'Desesperanza, falta de fe, desánimo.', keywords: 'Esperanzas perdidas, Rechazo, Pérdida, Pesimismo.' } },
+                { id: '18', name: 'La Luna', emoji: '🌙', upright: { description: 'Ilusión, miedo, ansiedad, subconsciente, intuición.', keywords: 'Secretos, Infidelidad, Engaño, Confusión, Ilusión, Sueños.' }, reversed: { description: 'Verdad revelada, confusión disipada, liberación del miedo.', keywords: 'Revelar la verdad, Secretos expuestos, Liberar el miedo.' } },
+                { id: '19', name: 'El Sol', emoji: '☀️', upright: { description: 'Éxito, vitalidad, alegría, claridad, optimismo.', keywords: 'Felicidad, Éxito, Vitalidad, Claridad, Optimismo.' }, reversed: { description: 'Tristeza, pesimismo, falta de éxito.', keywords: 'Tristeza, Ego, Arrogancia, Opresión.' } },
+                { id: '20', name: 'El Juicio', emoji: '🎺', upright: { description: 'Renacimiento, juicio, despertar, autoevaluación.', keywords: 'Renacimiento, Llamado interior, Perdón, Anuncio.' }, reversed: { description: 'Autocrítica, ignorar la llamada, miedo al cambio.', keywords: 'Chismes, Acusaciones falsas, Culpa injusta.' } },
+                { id: '21', name: 'El Mundo', emoji: '🌐', upright: { description: 'Finalización, integración, logro, plenitud, viaje.', keywords: 'Finalización, Plenitud, Logros, Éxito, Viajes.' }, reversed: { description: 'Falta de cierre, tareas incompletas, estancamiento.', keywords: 'Contratiempos, Retrasos, Tareas incompletas.' } },
+            ];
+
+            const majorArcanaContainer = document.querySelector('#guia-cosmica .grid');
+            majorArcanaData.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'card-interactive bg-white p-4 rounded-lg shadow-md border border-gray-200 text-center';
+                cardElement.dataset.cardId = card.id;
+                cardElement.innerHTML = `
+                <div class="text-5xl mb-2">${card.emoji}</div>
+                <h4 class="font-bold text-sm">${card.name}</h4>
+            `;
+                majorArcanaContainer.appendChild(cardElement);
+            });
+
+            // Major Arcana Interactivity
+            const majorCardItems = document.querySelectorAll('.card-interactive[data-card-id]');
+            const majorDetailPanel = document.getElementById('major-card-detail-panel');
+            const majorDetailCardName = document.getElementById('major-detail-card-name');
+            const majorDetailDescription = document.getElementById('major-detail-description');
+            const majorDetailKeywords = document.getElementById('major-detail-keywords');
+            const majorUprightBtn = document.getElementById('major-upright-btn');
+            const majorReversedBtn = document.getElementById('major-reversed-btn');
+            const majorMeaningType = document.getElementById('major-meaning-type');
+            let currentMajorCard = null;
+
+            function updateMajorCardDetailPanel(card, isReversed = false) {
+                currentMajorCard = card;
+                majorDetailCardName.textContent = card.name;
+
+                if (isReversed) {
+                    majorDetailDescription.textContent = card.reversed.description;
+                    majorDetailKeywords.textContent = `Palabras clave: ${card.reversed.keywords}`;
+                    majorUprightBtn.classList.remove('bg-gray-800', 'text-white');
+                    majorUprightBtn.classList.add('bg-gray-200', 'text-gray-800');
+                    majorReversedBtn.classList.add('bg-gray-800', 'text-white');
+                    majorReversedBtn.classList.remove('bg-gray-200', 'text-gray-800');
+                    majorMeaningType.textContent = 'Significado (Invertida):';
+                } else {
+                    majorDetailDescription.textContent = card.upright.description;
+                    majorDetailKeywords.textContent = `Palabras clave: ${card.upright.keywords}`;
+                    majorUprightBtn.classList.add('bg-gray-800', 'text-white');
+                    majorUprightBtn.classList.remove('bg-gray-200', 'text-gray-800');
+                    majorReversedBtn.classList.remove('bg-gray-800', 'text-white');
+                    majorReversedBtn.classList.add('bg-gray-200', 'text-gray-800');
+                    majorMeaningType.textContent = 'Significado (Derecha):';
+                }
+
+                majorDetailPanel.classList.add('active');
+                majorDetailPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            majorCardItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const cardId = item.dataset.cardId;
+                    const card = majorArcanaData.find(c => c.id === cardId);
+                    if (card) {
+                        updateMajorCardDetailPanel(card, false);
+                    }
+                });
+            });
+
+            majorUprightBtn.addEventListener('click', () => {
+                if (currentMajorCard) {
+                    updateMajorCardDetailPanel(currentMajorCard, false);
+                }
+            });
+
+            majorReversedBtn.addEventListener('click', () => {
+                if (currentMajorCard) {
+                    updateMajorCardDetailPanel(currentMajorCard, true);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
